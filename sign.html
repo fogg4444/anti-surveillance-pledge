@@ -1,0 +1,47 @@
+---
+layout: default
+title: Sign the pledge
+permalink: /sign/
+description: For council members and candidates in Contra Costa County.
+---
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">For council members and candidates</p>
+    <h1>Sign the pledge.</h1>
+    <p class="hero-lede">One commitment, one sentence. We publish your name, your city, and the date. Signing is not an endorsement, and no organization involved is endorsing you in return.</p>
+
+    <div class="pledge-card" style="margin-top:2.5rem">
+      <p class="eyebrow">The pledge</p>
+      <p class="pledge-text">I will not vote to approve, renew, expand, or accept as a gift or grant any mass surveillance system in my city — including license plate readers, facial recognition, drone surveillance, predictive policing, and networked camera systems — and I will work to end the ones already in place.</p>
+      <p class="pledge-rider">Mass surveillance here means any technology that collects information about residents who are not suspected of a crime. That includes free trials, pilot programs, donated equipment, systems paid for by grants or private foundations, and access to networks run by other agencies.</p>
+    </div>
+
+    <div class="btn-row">
+      {% if site.form_url and site.form_url != "" %}
+      <a class="btn" href="{{ site.form_url }}">Open the signing form</a>
+      {% else %}
+      <a class="btn" href="mailto:{{ site.contact_email }}?subject=Pledge%20signature">Email your signature</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="band band-light">
+  <div class="wrap prose">
+    <p class="eyebrow">For residents</p>
+    <h2>Ask them yourself.</h2>
+    <p>The pledge works because officials get asked in public and on a deadline. Here is the letter we send. Change the bracketed parts and send it from your own address — a note from a constituent lands harder than one from a group.</p>
+
+    <h3>To a sitting council member</h3>
+    <p><strong>Subject:</strong> A yes-or-no question about surveillance in [City]</p>
+    <p>Council Member [Name],</p>
+    <p>I'm a resident of [City]. Along with other residents across the county, I'm asking every council member and candidate one question and publishing the answers.</p>
+    <p>Will you commit to voting against any mass surveillance system in [City] — license plate readers, facial recognition, networked cameras — for the rest of your term?</p>
+    <p>The full pledge is at [URL]. I'd welcome your signature. If your position is different, I'll publish your response in full and unedited alongside it.</p>
+    <p>I'm collecting responses through [date] and publishing on [date].</p>
+
+    <h3>To a candidate</h3>
+    <p>Same letter, with this opening instead: <em>Voters in [City] will be choosing between candidates on this in November. I want to give you the chance to be on record early.</em></p>
+  </div>
+</section>

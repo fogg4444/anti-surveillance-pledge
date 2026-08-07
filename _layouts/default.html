@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="wordmark" href="{{ site.baseurl }}/">
+      <span class="wordmark-main">No Mass Surveillance</span>
+      <span class="wordmark-sub">Pledge · {{ site.region }}</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="{{ site.baseurl }}/record/">The Record</a>
+      <a href="{{ site.baseurl }}/about/">About</a>
+      <a class="nav-cta" href="{{ site.baseurl }}/sign/">Sign the pledge</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+{{ content }}
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-block">
+      <p class="footer-title">{{ site.title }}</p>
+      <p class="footer-note">A volunteer effort by residents of {{ site.region }}. Signing the pledge is not an endorsement by any organization involved.</p>
+    </div>
+    <div class="footer-block">
+      <p class="footer-title">Get in touch</p>
+      <p class="footer-note"><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+      <p class="footer-note"><a href="https://github.com/fogg4444/anti-surveillance-pledge">Source on GitHub</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

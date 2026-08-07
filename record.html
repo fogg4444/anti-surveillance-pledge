@@ -1,0 +1,58 @@
+---
+layout: default
+title: The Record
+permalink: /record/
+description: Who we asked, when we asked, and what they said.
+---
+
+{% assign all = "" | split: "" %}
+{% for c in site.data.officials %}{% assign all = all | concat: c.people %}{% endfor %}
+{% assign signed = all | where: "status", "signed" %}
+{% assign declined = all | where: "status", "declined" %}
+{% assign silent = all | where: "status", "silent" %}
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">The record</p>
+    <h1>Who we asked. What they said.</h1>
+    <p class="hero-lede">Every council member and declared candidate in {{ site.region }} gets the same question and the same deadline. We publish the answer in full. Silence is an answer too, and we publish that as well.</p>
+
+    <div class="tally">
+      <div><span class="tally-num">{{ signed.size }}</span><span class="tally-label">Signed</span></div>
+      <div><span class="tally-num">{{ declined.size }}</span><span class="tally-label">Declined</span></div>
+      <div><span class="tally-num">{{ silent.size }}</span><span class="tally-label">No response</span></div>
+      <div><span class="tally-num">{{ all.size }}</span><span class="tally-label">Asked</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-light">
+  <div class="wrap">
+    {% for c in site.data.officials %}
+    <div class="record-city">
+      <h2 class="record-city-name">{{ c.city }}</h2>
+      {% if c.people.size == 0 %}
+        <div class="record-row"><span class="record-name" style="color:var(--dim)">No requests sent yet.</span></div>
+      {% else %}
+        {% for p in c.people %}
+        <div class="record-row">
+          <span>
+            <span class="record-name">{{ p.name }}</span>
+            <span class="record-seat">{{ p.seat }}{% if p.note %} · {{ p.note }}{% endif %}</span>
+          </span>
+          <span class="record-date">{% if p.asked %}Asked {{ p.asked }}{% endif %}</span>
+          <span class="status status-{{ p.status }}">{% case p.status %}{% when 'signed' %}Signed{% when 'declined' %}Declined{% when 'silent' %}No response{% else %}Awaiting reply{% endcase %}</span>
+        </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap prose">
+    <h2>Know something we don't?</h2>
+    <p>If your council member has taken a public position on surveillance technology, or if you have asked them yourself, send it to <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a> and we'll add it with a link to the source.</p>
+  </div>
+</section>

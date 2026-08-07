@@ -1,0 +1,25 @@
+title: "No Mass Surveillance Pledge"
+region: "Contra Costa County"
+description: "We're asking every city council member and council candidate in Contra Costa County to commit, in writing, to keeping mass surveillance out of our cities."
+
+# GitHub Pages project site settings.
+# If you later move to a custom domain, set url to the domain and baseurl to "".
+url: "https://fogg4444.github.io"
+baseurl: "/anti-surveillance-pledge"
+
+contact_email: "REPLACE@example.org"
+form_url: ""   # Paste a Google Form / Tally URL here to activate the Sign page button.
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .jekyll-cache

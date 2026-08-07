@@ -1,0 +1,46 @@
+# The Record.
+#
+# HOW TO USE THIS FILE
+# --------------------
+# Add one entry per city. Under `people`, add one entry per council member
+# or declared candidate you have contacted.
+#
+# status must be one of:
+#   signed   — they signed the pledge
+#   declined — they responded and said no
+#   silent   — asked, deadline passed, no answer
+#   pending  — asked, deadline not yet reached
+#
+# asked:  the date you sent the request (YYYY-MM-DD)
+# note:   optional. Their own words, quoted, or a one-line summary.
+#
+# EVERYTHING BELOW IS PLACEHOLDER DATA. Delete it before publishing.
+# Do not list a real person until you have actually contacted them and
+# recorded their real response.
+
+- city: El Cerrito
+  people:
+    - name: "SAMPLE ENTRY — delete before launch"
+      seat: "Council Member"
+      status: signed
+      asked: "2026-08-01"
+      note: "Placeholder row showing how a signed entry renders."
+    - name: "SAMPLE ENTRY — delete before launch"
+      seat: "Council candidate"
+      status: pending
+      asked: "2026-08-01"
+
+- city: Richmond
+  people: []
+
+- city: Berkeley
+  people: []
+
+- city: Albany
+  people: []
+
+- city: Walnut Creek
+  people: []
+
+- city: Concord
+  people: []
